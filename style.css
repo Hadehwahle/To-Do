@@ -103,10 +103,10 @@ form button:hover {
   opacity: 0.5;
 }
 
-select{
+select {
   color: #d88771;
   border: none;
-  outline:none;
+  outline: none;
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -115,7 +115,7 @@ select{
   padding: 1.1rem;
   font-weight: 600;
 }
-select option{
+select option {
   font-weight: 600;
   border-radius: none;
 }
@@ -126,7 +126,7 @@ select option{
   font-weight: 600;
 }
 
-.select::after{
+.select::after {
   content: "\25bc";
   position: absolute;
   top: 0;
@@ -135,4 +135,49 @@ select option{
   color: #d88771;
   pointer-events: none;
   transition: all 0.3s ease;
+}
+
+/* responsiveness */
+@media (max-width: 700px) {
+  form input {
+    width: 50vw;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 560px) {
+  form input {
+    width: 45vw;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 460px) {
+  form input {
+    margin-left: 1rem;
+    width: 40vw;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  select{
+    width: 30vw;
+    padding: 1.1rem 0.4rem;
+  }
+}
+@media (max-width: 400px) {
+  form input {
+    margin-left: 1rem;
+    width: 40vw;
+  }
+  h1 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  select{
+    width: 30vw;
+    padding: 1.1rem 0.4rem;
+  }
 }
