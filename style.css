@@ -11,7 +11,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 body {
-  background-image: linear-gradient(120deg, #f5d25e, #fda085);
+  background-image: linear-gradient(135deg, #153677, #4e085f);
   color: #fff;
   min-height: 100vh;
 }
@@ -63,9 +63,11 @@ form button:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: all 0.5s ease;
 }
 .todo-item {
   flex: 1;
+  padding: 0rem 0.5rem;
 }
 .complete-btn,
 .trash-btn {
@@ -87,4 +89,50 @@ form button:hover {
 }
 .trash-btn:hover {
   background: rgb(192, 62, 62);
+}
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+.fall {
+  transform: translate(8rem) rotate(90deg);
+  opacity: 0;
+}
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+select{
+  color: #d88771;
+  border: none;
+  outline:none;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  width: 10rem;
+  cursor: pointer;
+  padding: 1.1rem;
+  font-weight: 600;
+}
+select option{
+  font-weight: 600;
+  border-radius: none;
+}
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+  font-weight: 600;
+}
+
+.select::after{
+  content: "\25bc";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  color: #d88771;
+  pointer-events: none;
+  transition: all 0.3s ease;
 }
